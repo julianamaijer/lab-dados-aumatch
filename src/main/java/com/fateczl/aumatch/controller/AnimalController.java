@@ -28,11 +28,6 @@ public class AnimalController {
         return ResponseEntity.ok(animalService.update(animalId,animal));
    }
 
-    @PutMapping
-    public ResponseEntity<?> update(@RequestBody Animal animal) {
-        return ResponseEntity.ok(animal);
-    }
-
     @DeleteMapping("/{animalId}")
     public ResponseEntity<Animal> delete(@PathVariable Long animalId){
         animalService.delete(animalId);
